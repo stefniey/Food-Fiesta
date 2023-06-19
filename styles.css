@@ -9,18 +9,37 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 .container {
-    border: 2px solid blue;
     width: 100%;
 }
 
+.nav-bar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    width: 55%;
+    
+}
+
+.nav-link {
+    transition: 0.7s ease;
+}
 
 .hamburger {
     display: none;
     cursor: pointer;
-    /* position: absolute; */
+    position: relative;
 }
 
 .bar {
@@ -32,6 +51,7 @@ html {
     transition: all 0.3s ease-in-out;
     background-color: #fca031;
 }
+
 
 section nav {
     display: flex;
@@ -94,22 +114,18 @@ section nav .icon i {
     transition: 0.3s;
 }
 
-
 /* main */
 
 .main-content {
     width: 100%;
-
 }
 
 .main {
-
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: relative;
     top: 130px;
-    /* flex-direction: column; */
 
 }
 
@@ -226,8 +242,8 @@ section nav .icon i {
     text-decoration: none;
     color: #fff;
     position: relative;
-    left: 47%;
-    bottom: 10px;
+    left: 38%;
+    bottom: -8px;
 }
 
 /* menu */
@@ -275,7 +291,7 @@ section nav .icon i {
 
 .menu .menu_box .menu_card {
     width: 100%;
-    height: 480px;
+    height: 550px;
     padding-top: 10px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -837,8 +853,23 @@ footer .footer_main .footer_tag i:hover {
 
 }
 
+@media screen and (max-width: 1058px) {
+    section nav .icon i {
+        display: none;
+    }
+    
+
+}
 /* reponsiveness for small screen view port */
 @media screen and (max-width: 790px) {
+    .nav-bar {
+        min-height: 10px;
+    }
+    section nav .logo img {
+        width: 22%;
+    }
+    
+
     .hamburger {
         display: block;
         z-index: 100;
@@ -856,29 +887,35 @@ footer .footer_main .footer_tag i:hover {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    ul {
+    .nav-menu {
         z-index: 100;
         position: fixed;
         left: -100%;
         top: 0;
         gap: 0;
         flex-direction: column;
-        width: 86%;
-        height: 100vh;
+        width: 100%;
+        height: 50vh;
         text-align: center;
         transition: 0.3s;
-        background-color: var(--black);
-        margin-left: 8%;
+        background-color: #fff;
+        margin-left: 0;
+        border: 2px solid #fca031;
     }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
 
     .icon {
-        display: block;
+        display: none;
     }
 
-    .nav {
-        display: flex;
-        justify-content: space-around;
-    }
 
     .about .about_main {
         display: flex;
@@ -887,7 +924,6 @@ footer .footer_main .footer_tag i:hover {
 
     .main {
         flex-direction: column;
-
     }
 
     .main .mon_text h1 {
@@ -907,14 +943,12 @@ footer .footer_main .footer_tag i:hover {
     }
 
     .main-content p {
-        width: 80%;
         bottom: -130px;
-        padding: 10px 20px;
 
     }
 
     .main_btn {
-        left: 45px;
+        left: 25px;
         bottom: -140px;
     }
 
@@ -925,8 +959,7 @@ footer .footer_main .footer_tag i:hover {
     }
 
     .about .about_main .about_text p {
-        padding: 5px 15px;
-        width: 95%;
+        padding: 5px 20px;
     }
 
     .about_text {
@@ -947,6 +980,7 @@ footer .footer_main .footer_tag i:hover {
     }
 
     /* menu */
+    
     .menu .menu_box .menu_card {
         width: 100%;
         height: 450px;
@@ -963,7 +997,7 @@ footer .footer_main .footer_tag i:hover {
     }
 
     .gallery h1 {
-        font-size: 40px;
+        font-size: 55px;
     }
 
     .gallery .gallery_image_box .gallery_image p {
@@ -973,13 +1007,13 @@ footer .footer_main .footer_tag i:hover {
 
     /* review */
     .review h1 {
-        font-size: 35px;
+        font-size: 55px;
     }
 
     .review .review_box {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2%;
+        grid-gap: 3%;
     }
 
     .review .review_box .review_card {
@@ -1147,8 +1181,8 @@ footer .footer_main .footer_tag i:hover {
     .team .team_box {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 4%;
-        padding: 2% 5% 60% 0;
+        gap: 8%;
+        padding: 2% 5% 75% 0;
     }
 
     .team .team_box .profile {
