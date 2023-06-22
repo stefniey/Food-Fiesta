@@ -937,7 +937,7 @@ footer .footer_main .footer_tag i:hover {
     }
 
     .main .main_image img {
-        width: 400px;
+        width: 400px; 
         left: 0px;
     }
 
@@ -982,7 +982,7 @@ footer .footer_main .footer_tag i:hover {
     
     .menu .menu_box .menu_card {
         width: 100%;
-        height: 450px;
+        height: 480px;
     }
 
     .menu .menu_box {
@@ -990,9 +990,14 @@ footer .footer_main .footer_tag i:hover {
     }
 
     /* gallery */
+    .gallery_image_box{
+        width: 95%;
+        padding: 0 10px;
+    }
     .gallery .gallery_image_box {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        
     }
 
     .gallery h1 {
@@ -1052,8 +1057,8 @@ footer .footer_main .footer_tag i:hover {
     .team .team_box {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 4%;
-        padding: 2% 5% 2% 0;
+        gap: 15%;
+        padding: 2% 5% 20% 0;
     }
 
     .team .team_box .profile {
@@ -1077,8 +1082,8 @@ footer .footer_main .footer_tag i:hover {
 @media screen and (max-width: 570px) {
 
     .main .main_image img {
-        width: 100%;
-        left: 2px;
+        width: 90%;
+        left: 6%;
     }
 
     .menu .menu_box {
@@ -1162,14 +1167,13 @@ footer .footer_main .footer_tag i:hover {
     }
 
     .order .order_main form .input input {
-        width: 100%;
+        width: 95%;
     }
 
     .order .order_main form .order_btn {
         padding: 5px 0;
-        background: #fca031;
-        color: #fff;
         width: 60%;
+        margin: 4%;
     }
 
     /* team */
